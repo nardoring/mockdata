@@ -1,0 +1,3 @@
+* Mock Data Lake
+
+This repo will house our mock data for use in the Data Lake
