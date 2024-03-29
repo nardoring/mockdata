@@ -1,3 +1,13 @@
 * Mock Data Lake
 
 This repo will house our mock data for use in the Data Lake
+
+You will want to run the following command once this has been added as a git submodule to =./infra/=
+
+#+begin_src shell
+cd infra/mockdata
+git update-index --assume-unchanged metadata/requests.json
+#+end_src
+
+This will essentially stop tracking changes of =requests.json=.
+
