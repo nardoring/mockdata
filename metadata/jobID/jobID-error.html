@@ -1,0 +1,71 @@
+2024-04-04T01:37:51.696 DEBUG --- [   Thread-12] l.s.athena.query_utils     : Running query as type "Hive": CREATE EXTERNAL TABLE IF NOT EXISTS mockdata.air_quality (`unnamed` bigint, `state code` bigint, `county code` bigint, `site num` bigint, `address` string, `state` string, `county` string, `city` string, `date local` int, `no2 units` string, `no2 mean` double, `no2 1st max value` double, `no2 1st max hour` bigint, `no2 aqi` bigint, `o3 units` string, `o3 mean` double, `o3 1st max value` double, `o3 1st max hour` bigint, `o3 aqi` bigint, `so2 units` string, `so2 mean` double, `so2 1st max value` double, `so2 1st max hour` bigint, `so2 aqi` double, `co units` string, `co mean` double, `co 1st max value` double, `co 1st max hour` bigint, `co aqi` double) ROW FORMAT SERDE 'org.apache.hadoop.hive.ql.io.parquet.serde.ParquetHiveSerDe' WITH SERDEPROPERTIES ('serialization.format'='1') STORED AS INPUTFORMAT 'org.apache.hadoop.hive.ql.io.parquet.MapredParquetInputFormat' OUTPUTFORMAT 'org.apache.hadoop.hive.ql.io.parquet.MapredParquetOutputFormat' LOCATION 's3a://data-lake/air-quality' TBLPROPERTIES ('EXTERNAL'='TRUE', 'parquet.compression'='SNAPPY')
+2024-04-04T01:37:51.696  INFO --- [   Thread-11] pyhive.hive                : USE `default`
+2024-04-04T01:37:51.697 DEBUG --- [   Thread-12] localstack.packages.api    : Installation of hive skipped (already installed).
+2024-04-04T01:37:51.697 DEBUG --- [   Thread-12] localstack.packages.api    : Performing runtime setup for already installed package.
+2024-04-04T01:37:51.697 DEBUG --- [   Thread-12] localstack.packages.api    : Installation of hadoop skipped (already installed).
+2024-04-04T01:37:51.697 DEBUG --- [   Thread-12] localstack.packages.api    : Performing runtime setup for already installed package.
+2024-04-04T01:37:51.697 DEBUG --- [   Thread-12] localstack.packages.api    : Installation of hive skipped (already installed).
+2024-04-04T01:37:51.697 DEBUG --- [   Thread-12] localstack.packages.api    : Performing runtime setup for already installed package.
+2024-04-04T01:37:51.697 DEBUG --- [   Thread-12] localstack.utils.run       : Executing command: ['bash', '-c', 'ps aux | grep hiveserver2 | grep -v grep']
+2024-04-04T01:37:51.718  INFO --- [   Thread-12] pyhive.hive                : USE `default`
+2024-04-04T01:37:51.780  INFO --- [   Thread-11] pyhive.hive                : CREATE DATABASE IF NOT EXISTS mockdata
+2024-04-04T01:37:51.854  INFO --- [   Thread-12] pyhive.hive                : CREATE EXTERNAL TABLE IF NOT EXISTS mockdata.air_quality (`unnamed` bigint, `state code` bigint, `county code` bigint, `site num` bigint, `address` string, `state` string, `county` string, `city` string, `date local` int, `no2 units` string, `no2 mean` double, `no2 1st max value` double, `no2 1st max hour` bigint, `no2 aqi` bigint, `o3 units` string, `o3 mean` double, `o3 1st max value` double, `o3 1st max hour` bigint, `o3 aqi` bigint, `so2 units` string, `so2 mean` double, `so2 1st max value` double, `so2 1st max hour` bigint, `so2 aqi` double, `co units` string, `co mean` double, `co 1st max value` double, `co 1st max hour` bigint, `co aqi` double) ROW FORMAT SERDE 'org.apache.hadoop.hive.ql.io.parquet.serde.ParquetHiveSerDe' WITH SERDEPROPERTIES ('serialization.format'='1') STORED AS INPUTFORMAT 'org.apache.hadoop.hive.ql.io.parquet.MapredParquetInputFormat' OUTPUTFORMAT 'org.apache.hadoop.hive.ql.io.parquet.MapredParquetOutputFormat' LOCATION 's3a://data-lake/air-quality' TBLPROPERTIES ('EXTERNAL'='TRUE', 'parquet.compression'='SNAPPY')
+2024-04-04T01:37:59.921  INFO --- [   asgi_gw_3] localstack.request.aws     : AWS s3.HeadObject => 404 (NoSuchKey)
+2024-04-04T01:38:00.064  INFO --- [   asgi_gw_4] localstack.request.aws     : AWS s3.ListObjectsV2 => 200
+2024-04-04T01:38:00.115  INFO --- [   asgi_gw_9] localstack.request.aws     : AWS s3.HeadObject => 404 (NoSuchKey)
+2024-04-04T01:38:00.129  INFO --- [   asgi_gw_7] localstack.request.aws     : AWS s3.ListObjectsV2 => 200
+2024-04-04T01:38:00.194  INFO --- [  asgi_gw_13] localstack.request.aws     : AWS s3.HeadObject => 404 (NoSuchKey)
+2024-04-04T01:38:00.209  INFO --- [  asgi_gw_11] localstack.request.aws     : AWS s3.ListObjectsV2 => 200
+2024-04-04T01:38:00.269  INFO --- [   asgi_gw_2] localstack.request.aws     : AWS s3.HeadObject => 404 (NoSuchKey)
+2024-04-04T01:38:00.286  INFO --- [   asgi_gw_1] localstack.request.aws     : AWS s3.ListObjectsV2 => 200
+2024-04-04T01:38:00.366  INFO --- [   asgi_gw_3] localstack.request.aws     : AWS s3.PutObject => 200
+2024-04-04T01:38:01.035  INFO --- [   asgi_gw_4] localstack.request.aws     : AWS s3.HeadObject => 404 (NoSuchKey)
+2024-04-04T01:38:01.052  INFO --- [   asgi_gw_9] localstack.request.aws     : AWS s3.ListObjectsV2 => 200
+2024-04-04T01:38:01.131  INFO --- [   asgi_gw_7] localstack.request.aws     : AWS s3.ListObjectsV2 => 200
+2024-04-04T01:38:01.200  INFO --- [  asgi_gw_13] localstack.request.aws     : AWS s3.HeadObject => 404 (NoSuchKey)
+2024-04-04T01:38:01.213  INFO --- [  asgi_gw_11] localstack.request.aws     : AWS s3.ListObjectsV2 => 200
+2024-04-04T01:38:01.312  INFO --- [   asgi_gw_2] localstack.request.aws     : AWS s3.HeadObject => 404 (NoSuchKey)
+2024-04-04T01:38:01.327  INFO --- [   asgi_gw_1] localstack.request.aws     : AWS s3.ListObjectsV2 => 200
+2024-04-04T01:38:01.389  INFO --- [   asgi_gw_3] localstack.request.aws     : AWS s3.ListObjectsV2 => 200
+2024-04-04T01:38:01.444  INFO --- [   asgi_gw_4] localstack.request.aws     : AWS s3.HeadObject => 404 (NoSuchKey)
+2024-04-04T03:08:16.620  INFO --- [  asgi_gw_13] localstack.request.aws     : AWS sqs.ReceiveMessage => 200
+2024-04-04T03:08:36.359  INFO --- [  asgi_gw_10] localstack.request.aws     : AWS dynamodb.Query => 200
+2024-04-04T03:09:25.730  INFO --- [   asgi_gw_4] localstack.request.aws     : AWS dynamodb.Query => 200
+2024-04-04T03:09:25.887  INFO --- [   asgi_gw_6] localstack.request.aws     : AWS s3.GetObject => 200
+2024-04-04T03:12:14.786  INFO --- [   asgi_gw_5] localstack.request.http    : OPTIONS /data-lake/metadata/b6fb3bpx/b6fb3bpx-eda.html => 200
+2024-04-04T03:12:14.795  INFO --- [  asgi_gw_14] localstack.request.aws     : AWS s3.GetObject => 200
+2024-04-04T03:12:14.881  INFO --- [  asgi_gw_13] localstack.request.http    : OPTIONS /data-lake => 200
+2024-04-04T03:12:14.905  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS s3.ListObjectsV2 => 200
+2024-04-04T03:13:26.025  INFO --- [   asgi_gw_5] localstack.request.aws     : AWS sqs.ListQueues => 200
+2024-04-04T03:13:26.037  INFO --- [  asgi_gw_14] localstack.request.aws     : AWS sns.ListTopics => 200
+2024-04-04T03:15:38.261  INFO --- [  asgi_gw_13] localstack.request.http    : OPTIONS /data-lake => 200
+2024-04-04T03:15:38.270  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS s3.ListObjectsV2 => 200
+2024-04-04T03:15:38.393  INFO --- [   asgi_gw_4] localstack.request.http    : OPTIONS /data-lake => 200
+2024-04-04T03:15:38.397  INFO --- [   asgi_gw_6] localstack.request.http    : OPTIONS /data-lake => 200
+2024-04-04T03:15:38.402  INFO --- [  asgi_gw_10] localstack.request.aws     : AWS s3.ListObjectsV2 => 200
+2024-04-04T03:15:38.429  INFO --- [   asgi_gw_1] localstack.request.http    : OPTIONS /data-lake => 200
+2024-04-04T03:15:38.436  INFO --- [   asgi_gw_5] localstack.request.aws     : AWS s3.ListObjectsV2 => 200
+2024-04-04T03:15:38.455  INFO --- [  asgi_gw_14] localstack.request.aws     : AWS s3.DeleteObjects => 200
+2024-04-04T03:15:38.556  INFO --- [  asgi_gw_13] localstack.request.aws     : AWS s3.ListObjectsV2 => 200
+2024-04-04T03:16:57.496  INFO --- [  asgi_gw_14] localstack.request.http    : OPTIONS /data-lake/metadata/b6fb3bpx/b6fb3bpx-eda.html => 200
+2024-04-04T03:16:57.618  INFO --- [  asgi_gw_13] localstack.request.aws     : AWS s3.PutObject => 200
+2024-04-04T03:16:57.715  INFO --- [   asgi_gw_4] localstack.request.http    : OPTIONS /data-lake => 200
+2024-04-04T03:16:57.725  INFO --- [   asgi_gw_6] localstack.request.aws     : AWS s3.ListObjectsV2 => 200
+2024-04-04T03:29:33.966  INFO --- [   asgi_gw_4] localstack.request.aws     : AWS s3.PutObject => 200
+2024-04-04T03:30:25.001  INFO --- [   asgi_gw_6] localstack.request.http    : OPTIONS /data-lake => 200
+2024-04-04T03:30:25.023  INFO --- [  asgi_gw_10] localstack.request.aws     : AWS s3.ListObjectsV2 => 200
+2024-04-04T03:30:29.122  INFO --- [   asgi_gw_5] localstack.request.http    : OPTIONS /data-lake/metadata/b6fb3bpx/b6fb3bpx-eda.html => 200
+2024-04-04T03:30:29.136  INFO --- [  asgi_gw_14] localstack.request.aws     : AWS s3.GetObject => 200
+2024-04-04T03:30:29.218  INFO --- [   asgi_gw_7] localstack.request.aws     : AWS s3.ListObjectsV2 => 200
+2024-04-04T03:30:40.601  INFO --- [  asgi_gw_10] localstack.request.aws     : AWS dynamodb.Query => 200
+2024-04-04T03:30:40.799  INFO --- [   asgi_gw_1] localstack.request.aws     : AWS s3.GetObject => 200
+2024-04-04T03:31:53.322  INFO --- [   asgi_gw_5] localstack.request.aws     : AWS s3.GetObject => 304 (NotModified)
+2024-04-04T03:35:52.375  INFO --- [   asgi_gw_4] localstack.request.aws     : AWS s3.GetObject => 304 (NotModified)
+2024-04-04T03:37:56.981  INFO --- [   asgi_gw_7] localstack.request.aws     : AWS s3.GetObject => 404 (NoSuchKey)
+2024-04-04T03:45:17.683  INFO --- [  asgi_gw_14] localstack.request.aws     : AWS dynamodb.Query => 200
+2024-04-04T03:45:17.823  INFO --- [   asgi_gw_7] localstack.request.aws     : AWS s3.GetObject => 304 (NotModified)
+2024-04-04T03:45:23.663  INFO --- [   asgi_gw_4] localstack.request.aws     : AWS s3.GetObject => 404 (NoSuchKey)
+2024-04-04T03:45:28.330  INFO --- [   asgi_gw_6] localstack.request.aws     : AWS dynamodb.Query => 200
+2024-04-04T03:45:35.170  INFO --- [   asgi_gw_1] localstack.request.aws     : AWS s3.GetObject => 404 (NoSuchKey)
+2024-04-04T03:46:41.514  INFO --- [   asgi_gw_1] localstack.request.aws     : AWS dynamodb.Query => 200
+2024-04-04T03:46:48.221  INFO --- [  asgi_gw_14] localstack.request.aws     : AWS s3.GetObject => 404 (NoSuchKey)
