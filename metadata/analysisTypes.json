@@ -1,14 +1,18 @@
 [
   {
     "id": "1",
-    "name": "Rolling Mean"
+    "name": "Correlation"
   },
   {
     "id": "2",
-    "name": "Rolling Std Deviation"
+    "name": "Exploratory Data Analysis"
   },
   {
     "id": "3",
-    "name": "Autocorrelation"
+    "name": "Simulated Job"
+  },
+  {
+    "id": "4",
+    "name": "Simulated Error"
   }
 ]

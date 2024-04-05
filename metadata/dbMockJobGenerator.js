@@ -24,9 +24,9 @@ function generateMockJobs(count, outputFilePath) {
   const mockRequests = [];
 
   const availableAnalysisTypes = [
-    'Rolling Mean',
-    'Rolling Std Deviation',
-    'Autocorrelation',
+    'Correlation',
+    'Exploratory Data Analysis',
+    'Simulated',
   ];
 
   for (let i = 1; i <= count; i++) {
