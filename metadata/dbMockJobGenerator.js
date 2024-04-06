@@ -4,7 +4,7 @@ const path = require('path');
 // pass the number of mockrequests in when you run it
 // defaults to 12 to show at least 2 page on most resolutions
 //   node src/dbMockJobGenerator.js 2 will produce 2 requests
-const NUM_OF_ITEMS = process.argv[2] ? parseInt(process.argv[2], 10) : 12;
+const NUM_OF_ITEMS = process.argv[2] ? parseInt(process.argv[2], 10) : 1;
 
 const sourceTagsPath = path.resolve(
   __dirname,
@@ -24,9 +24,9 @@ function generateMockJobs(count, outputFilePath) {
   const mockRequests = [];
 
   const availableAnalysisTypes = [
-    'Correlation',
+    // 'Correlation',
     'Exploratory Data Analysis',
-    'Simulated',
+    // 'Simulated',
   ];
 
   for (let i = 1; i <= count; i++) {
@@ -47,7 +47,7 @@ function generateMockJobs(count, outputFilePath) {
     };
 
     const item = {
-      requestID: getRandomId(),
+      requestID: "7pcznpit",
       id: getRandomId(),
       creationDate: getRandomDate(
         new Date(2023, 8, 1),
@@ -104,10 +104,10 @@ function getRandomListItem(availableIndexes) {
 function getRandomStatus() {
   const statusOptions = [
     'PENDING',
-    'QUEUED',
-    'PROCESSING',
-    'COMPLETE',
-    'FAILED',
+    // 'QUEUED',
+    // 'PROCESSING',
+    // 'COMPLETE',
+    // 'FAILED',
   ];
   const randomIndex = Math.floor(Math.random() * statusOptions.length);
   return statusOptions[randomIndex];
